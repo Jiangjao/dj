@@ -1,0 +1,245 @@
+label {
+  cursor: pointer;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  }
+.header{
+    width:100%;
+    height:110px;
+    background-color:#c2c2c242;
+    border-top:2px solid #f1dede;
+    border-bottom: 2px solid rgb(36,135,201);
+  }
+  .emmm{
+    color: red;
+    cursor: pointer;
+  }
+  .emmm:hover{
+    color: green;
+  }
+  .dropbtn {
+    background-color:#dcdcdc;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+/* 容器 <div> - 需要定位下拉内容 */
+.dropdown {
+    left:400px;
+    top:35px;
+    position: relative;
+    display: inline-block;
+}
+
+/* 下拉内容 (默认隐藏) */
+.dropdown-content {
+    border: 1px red solid;
+    text-align: center;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* 下拉菜单的链接 */
+.dropdown-content a {
+    color: #b7dbdb;
+    /*padding: 12px 16px;*/
+    text-decoration: none;
+    display: block;
+}
+
+/* 鼠标移上去后修改下拉菜单链接颜色 */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: red;
+
+}
+
+/* 在鼠标移上去后显示下拉菜单 */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* 当下拉内容显示后修改下拉按钮的背景颜色 */
+.dropdown:hover .dropbtn {
+    color: red;
+}
+  .bottom_first{
+    width:220px;
+    height:30px;
+    font-size: 19px;
+    position: relative;
+    left:190px;
+    top:36px;
+    display: inline-block;
+  }
+  .scroll{
+    font-size: 15px;
+  }
+  .bottom_{
+    width:160px;
+    height:30px;
+    font-size: 14px;
+    position: relative;
+    left:220px;
+    top:35px;
+    display: inline-block;
+    padding:14px 0px;
+  }
+  .last{
+    position: absolute;
+    display: block;
+    left:-60px;
+    top:10px;
+    width:30px;
+    height: 30px;
+    background-image:url("../img/phone.png");
+    background-repeat: no-repeat;
+    padding-top: 10px;
+    margin-left: 100px;
+  }
+  .bottom_image1{
+    border-radius:50%;
+    width:110px;
+    height:105px;
+    left:20px;
+    top:2px;
+    position: absolute;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-image: url("../img/logo.png");
+  }
+  .list_header{
+    position: relative;
+    left:170px;
+    top:20px;
+    margin:4px;
+    color: red;
+    width:250px;
+  }
+  .content{
+    position: relative;
+    left:300px;
+    text-align:center;
+    width:800px;
+    height:438px;
+    border:1px solid red;
+  }
+  .content_header{
+    width:100%;
+    height:40px;
+    background-color: #f7cc4b;
+    color: red;
+  }
+  a {
+  color: inherit; 
+  }
+
+body {
+  background: rgba(0, 0, 0, 0.1);
+  font-family: Microsoft YaHei;
+  margin:0px;
+  padding:0px;
+  }
+
+#Total {
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+  background: white;
+  width:1000px;
+  min-height: 800px;
+  margin: 50px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  border-left: 0.5px solid rgba(0, 0, 0, 0.32);
+  border-right: 0.5px solid rgba(0, 0, 0, 0.32);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.32);
+ }
+  #Total #Title {
+    background: #fdc92efc;
+    color: white;
+    width: 100%;
+    letter-spacing: 5px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    }
+  #Total .item, #Total .item_ {
+    width: 90%;
+    margin: 10px auto;
+    height: 25px;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+    }
+    #Total .item.item, #Total .item_.item {
+      margin-top: 10px;
+     }
+    #Total .item .important, #Total .item_ .important {
+      color: #6385d1;
+    }
+    #Total .item input, #Total .item_ input ,#telephonee{
+      position: absolute;
+      width: 50%;
+      height: 40px;
+      top: 50%;
+      left: 15%;
+      margin-top: -20px;
+      font-size: 15px;
+      outline: none;
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      transition: box-shadow .5s;
+      }
+      #Total .item input:focus, #Total .item_ input:focus {
+        box-shadow: 1px 1px 10px #6385d1, 1px 1px 10px #6385d1;
+      }
+    #Total .item.item_, #Total .item_.item_ {
+      width: 60%;
+      height: 30px;
+     /* border-bottom: .5px solid #6385d1;*/
+      border-radius: 2px;
+      font-size: 15px;
+      color: rgba(0, 0, 0, 0.6);
+      letter-spacing: 2px;
+      font-weight: lighter;
+      padding-left: 10px;
+      margin: 0;
+     /* margin-left: 60%;*/
+      position: absolute;
+      left:65%;
+      display: inline-block;
+      }
+  #Total #end {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-top: 1px solid rgba(0, 0, 0, 0.8);
+    width: 100%;
+    letter-spacing: 2px;
+    }
+    #Total #end #choose {
+      margin-right: 20px;
+    }
+    #Total #end #handup {
+      width: 130px;
+      height: 30px;
+      border: none;
+      background: #6385d1;
+      color: white;
+      border-radius: 3px;
+      margin-left: 10px;
+      }
+
+/*# sourceMappingURL=style.css.map */
