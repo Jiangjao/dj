@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>     
+    *{
+    padding: 0;
+    margin: 0;
+    }
+    body{
+        background: url(sky.jpg) no-repeat bottom center  fixed ;
+        font-family: 'helvetica neue',Georgia,Serif;
+        
+    }
+    
+    p{
+        text-align: center;
+        font-size:22px;
+        font-variant: small-caps
+        /* font-family:('helvetica neue',Georgia,Serif); */
+        /* font-weight:small-caps; */
+    }
+    .changeslide{
+        width:300px;
+        height: 300px;
+    }
+
+    a{
+        text-decoration: none;
+        
+        }
+    .nav{
+        width: 500px;
+        height: 150px;
+        margin: 50px auto;
+        opacity: 0.7;
+        position: absolute;
+        top:34%;
+        left:60%;
+    }
+    .nav li{
+        float: left;
+        width: 200px;
+        height: 50px;
+        margin-right: 10px;
+        background-color: pink;
+        line-height: 50px;
+        text-align: center;
+        border-bottom: 6px solid whitesmoke;
+    }
+    
+    .nav li a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        font-size: 20px;
+    }
+    .nav > li{
+        position: relative;
+    }
+    .nav .list{
+        position: relative;
+        overflow: hidden;/*必须用overflow,不然内容会挤出去，就算设置高度为零也没意义*/
+        top: 0px;
+        left: 0;
+        height:0;
+        /* transition: 0.1s; */
+    }
+    .nav .list2{
+        position: absolute;
+        overflow: hidden;/*必须用overflow,不然内容会挤出去，就算设置高度为零也没意义*/
+        top: 0px;
+        left: 0;
+        height:0;
+        
+        transition: 1s;
+    }
+     /* .nav > li:hover .list{
+        height: 230px;
+        color: red;
+        } */
+        .nav > li:hover .list2{
+        height: 274px;
+        color: red;
+        } 
+ 
+    
+</style>
+ 
+    <title>Page taget 3.0</title>
+</head>
+<body>
+    
+    <div class="changeslide" id="changeslide">
+
+    </div>
+    <p>Here you are looking for</p>
+   
+    <ul class="nav" >
+           
+            <li id="bar" title="hah"><a href="">Law/Regulation</a>
+                <ul class="list" id="list2">
+                    <li title="OHAUS documents describing specific applicable requirements for products,procedures,ISO9001 quality management system and ISO14001 environment management system"><a href="">QMS & EMS</a></li>
+                    <li title="hah66"><a href="">Quality Bulletin</a></li>
+                    <li title="hah77"><a href="">Report</a></li>
+                    <li title="hah88"><a href="">PLM</a></li>
+                </ul>
+                <ul class="list2" > 
+                        <li title="hah11"style=""><a href="">Law/Regulation</a></li>
+                        <li title="hah22" style=""><a href="">IP</a></li>
+                        <li title="hah33" style=""><a href="">Approval/Certificate</a></li>
+                        <li title="hah44" style=""><a href="">WTT</a></li>
+                        <li title="hah55" style=""><a href="">Tool & Traning</a></li>
+                        
+                </ul>
+            </li>
+          
+        </ul>
+     
+<script type="text/javascript">
+        //mouseover || mouseleave mouseenter mouseout注意几个东西的用法
+      
+        var timer2=null;
+        var list=document.getElementById('list2');
+        var bar=document.getElementById('bar');
+       
+        
+        bar.addEventListener('mouseenter',function () {
+        //    alert('hello')
+            changeH(273);
+        });
+        bar.addEventListener('mouseleave',function(){
+            changeHe(10);
+           
+        },false)
+        var oT2=bar.offsetTop;
+        var oT2=120;
+        console.log(oT2);
+        console.log(list);
+        function changeH(h){
+            timer2=setInterval(function(){
+                if(list.offsetHeight>=h){
+                    clearInterval(timer2);
+                }else{
+                    list.style.height=list.offsetHeight+2+'px';//这一块计算要注意！！！
+                    list.style.top=(-list.offsetHeight+'px');
+                    console.log(list.style.height,list.style.top);
+                }
+            },6);
+        }
+        function changeHe(h){
+            timer1=setInterval(function(){
+                if(list.offsetHeight<=h){
+                    clearInterval(timer1);
+                }else{
+                    list.style.height=list.offsetHeight-3+'px';//这一块计算要注意！！！
+                    list.style.top=(-list.offsetHeight+'px');
+                    
+                }
+            },5);
+        }
+        
+   
+    </script>
+</body>
+</html>
